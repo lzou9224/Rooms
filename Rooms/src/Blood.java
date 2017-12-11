@@ -1,9 +1,9 @@
 
-public class Room {
+public class Blood {
 	Person occupant;
 	int xLoc,yLoc;
 	
-	public Room(int x, int y)
+	public Blood(int x, int y)
 	{
 		xLoc = x;
 		yLoc = y;

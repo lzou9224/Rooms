@@ -7,21 +7,36 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		Room[][] building = new Room[5][5];
+		Blood[][] building = new Blood[5][5];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
 		{
 			for (int y = 0; y < building[x].length; y++)
 			{
-				building[x][y] = new Room(x,y);
+				building[x][y] = new Blood(x,y);
 			}
 		}
+		//Mouth Room 
+		int a =(int)(3*building.length);
+		int b = (int)(3*building.length);
+		building[a][b] = new Mouth(a,b);
+		
+		//Kidneys Room
+		int c = (int)(4*building.length);
+		int d = (int)(6*building.length);
+		building[c][d] = new Kidneys(c,d);
+
+		
+		//Intestines Room
+		int e = (int)(2*building.length);
+		int f = (int)(8*building.length);
+		building[e][f] = new Intestines(e,f);
 		
 		//Create a random winning room.
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
-		building[x][y] = new WinningRoom(x, y);
+		building[x][y] = new Bladder(x, y);
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);
@@ -45,7 +60,7 @@ public class Runner {
 		in.close();
 	}
 	
-	public static boolean validMove(String move, Person p, Room[][] map)
+	public static boolean validMove(String move, Person p, Blood[][] map)
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {

@@ -1,4 +1,5 @@
-//Lingli
+//Lingli Zou
+
 public class Person {
 	String firstName;
 	String familyName;
