@@ -2,8 +2,8 @@
 public class Kidneys extends Mouth
 
 {
-	public Kidneys(int x, int y) {
-		super(x, y);
+	public Kidneys(int c, int d) {
+		super(c, d);
 	}
 	
 	@Override

@@ -1,8 +1,8 @@
 
 public class Intestines extends Blood 
 {
-	public Intestines(int x, int y) {
-		super(x, y);
+	public Intestines(int e, int f) {
+		super(e, f);
 	}
 
 	@Override
