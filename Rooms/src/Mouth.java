@@ -1,8 +1,8 @@
 
 public class Mouth extends Blood
 {
-	public Mouth(int a, int b) {
-		super(a, b);
+	public Mouth(int x, int y) {
+		super(x, y);
 	}
 	
 	@Override

@@ -5,8 +5,8 @@ public class Bladder extends Blood
 		super(x, y);
 		// TODO Auto-generated constructor stub
 	}
-	@Override
 	
+	@Override
 	public void enterRoom(Person x) {
 		// TODO Auto-generated method stub
 		occupant = x;
