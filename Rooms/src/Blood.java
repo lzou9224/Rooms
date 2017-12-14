@@ -2,6 +2,26 @@
 public class Blood {
 	Person occupant;
 	int xLoc,yLoc;
+	private boolean explored = false;
+	
+	public void print ()
+	{
+		if(!explored && occupant == null)
+		{
+			System.out.print("[]");
+		}
+		else if(occupant != null)
+		{
+			System.out.print("[");
+			occupant.print();
+			System.out.print("]");
+		}
+		else if(explored)
+			System.out.print("[b]");
+	}
+	
+	
+	
 	
 	public Blood(int x, int y)
 	{
