@@ -1,4 +1,3 @@
-//Lingli Zou
 
 public class Person {
 	String firstName;
