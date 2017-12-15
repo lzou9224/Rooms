@@ -7,7 +7,7 @@ public class Board {
 	public Board(Blood[][] schoolMap)
 	    {
 	        this.schoolMap = schoolMap;
-	    }
+	    }   
 
 	    public void printMap()
 	    {
