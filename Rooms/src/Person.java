@@ -1,3 +1,4 @@
+//Lingli Zou
 
 public class Person {
 	String firstName;
@@ -27,6 +28,11 @@ public class Person {
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 	}
-
+	
+	//testing out print method -alyssa
+	public void print()
+	{
+		System.out.print("[x]");
+	}
 
 }
