@@ -1,5 +1,5 @@
 
-import blood.Blood;
+import Blood.blood;
 
 public class Board {
 	private Blood[][] schoolMap;
