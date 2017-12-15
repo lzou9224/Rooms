@@ -4,8 +4,9 @@ public class Blood {
 	int xLoc,yLoc;
 	private boolean explored = false;
 	
-	//print method, subject to change
-	public void print ()
+	//print method, subject to change 
+	//fixed print by defining print in person -alyssa
+	public void print()
 	{
 		if(!explored && occupant == null)
 		{
