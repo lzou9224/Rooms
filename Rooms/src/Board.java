@@ -1,18 +1,16 @@
 
-import Blood.blood;
-
 public class Board {
-	private Blood[][] schoolMap;
+	private Blood[][] BodyMap;
 
-	public Board(Blood[][] schoolMap)
+	public Board(Blood[][] BodyMap)
 	    {
-	        this.schoolMap = schoolMap;
+	        this.BodyMap = BodyMap;
 	    }   
 
 	    public void printMap()
 	    {
 
-	        for(Blood[] row : schoolMap)
+	        for(Blood[] row : BodyMap)
 	        {
 	            for (Blood room : row)
 	            {
@@ -21,12 +19,12 @@ public class Board {
 	            System.out.println();
 	        }
 	    }
-	    public Blood[][] getSchoolMap() {
-	        return schoolMap;
+	    public Blood[][] getBodyMap() {
+	        return BodyMap;
 	    }
 
-	    public void setSchoolMap(Blood[][] schoolMap) {
-	        this.schoolMap = schoolMap;
+	    public void setBodyMap(Blood[][] bodyMap) {
+	        this.BodyMap = bodyMap;
 	    }
 
 }
