@@ -17,9 +17,11 @@ public class Runner {
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
 		{
-			for (int y = 0; y < building[x].length; y++)
+			Blood[] row = building[x];
+			for (int y = 0; y < row.length; y++)
 			{
-				building[x][y] = new Blood(x,y);
+				
+				row[y] = new Blood(x,y);
 			}
 		}
 		//Mouth Room 
