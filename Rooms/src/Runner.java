@@ -20,8 +20,9 @@ public class Runner {
 			Blood[] row = building[x];
 			for (int y = 0; y < row.length; y++)
 			{
-				
-				row[y] = new Blood(x,y);
+				boolean[] tubes = {true, true, true, true};
+				Person[] occupants = {};
+				row[y] = new Blood(x,y, tubes, occupants);
 			}
 		}
 		//Mouth Room 

@@ -28,6 +28,7 @@ public class Blood {
 	//do we need an item for the letters? -lingli
 	public Blood(int x, int y, boolean[] tubes, Person[] occupants)
 	{
+		//tubes = hallways??
 		this.xLoc = x;
 		this.yLoc = y;
         this.tubes = tubes;
