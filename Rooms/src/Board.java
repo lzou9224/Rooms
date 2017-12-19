@@ -27,6 +27,7 @@ public class Board {
 	        this.BodyMap = bodyMap;
 	    }
 	    
+<<<<<<< HEAD
 	 public void printBoard()
 	 {
 		 for(int x=0; x< rooms.length; x++)
@@ -40,6 +41,11 @@ public class Board {
 			  
 		   }
 			 System.out.println();
+=======
+	 public printBoard(int size)
+	 {
+		 
+>>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 	 }
 
 }
