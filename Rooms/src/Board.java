@@ -26,5 +26,10 @@ public class Board {
 	    public void setBodyMap(Blood[][] bodyMap) {
 	        this.BodyMap = bodyMap;
 	    }
+	    
+	 public printBoard(int size)
+	 {
+		 
+	 }
 
 }

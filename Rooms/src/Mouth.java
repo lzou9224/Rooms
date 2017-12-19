@@ -1,8 +1,8 @@
 
 public class Mouth extends Blood
 {
-	public Mouth(int a, int b) {
-		super(a, b);
+	public Mouth(int a, int b, boolean[] tubes, Person[] occupants) {
+		super(a, b, tubes, occupants);
 	}
 	
 	@Override
@@ -22,7 +22,7 @@ public class Mouth extends Blood
 	{
 		if (getOccupants().length != 0)
 	    {
-	      System.out.print(getOccupants()[0].print());
+	      System.out.println(getOccupants()[0].print());
 	    }
 	    else if (this.explored)
 	    {
@@ -37,22 +37,22 @@ public class Mouth extends Blood
 
 	    public String toString()
 	    {
-	    	boolean[] doors = this.getTubes();
-	    	String response = "This is the mouth. It has doors to the ";
-	    	if (doors[0])
+	    	boolean[] tubes = this.getTubes();
+	    	String response = "This is the mouth. It is connected to the ";
+	    	if (tubes[0])
 	    	{
 	    		response += "N";
 	    	}
 	    	
-	    	if(doors[1]) {
+	    	if(tubes[1]) {
 	    		response += " and E";
 	    	}
 	    	
-	    	if (doors[2]) {
+	    	if (tubes[2]) {
 	    		response += " and S";
 	    	}
 	    	
-	    	if (doors[3]) {
+	    	if (tubes[3]) {
 	    		response += " and W";
 	    	}
 	    	
