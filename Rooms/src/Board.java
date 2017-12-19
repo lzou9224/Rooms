@@ -26,5 +26,20 @@ public class Board {
 	    public void setBodyMap(Blood[][] bodyMap) {
 	        this.BodyMap = bodyMap;
 	    }
+	    
+	 public void printBoard()
+	 {
+		 for(int x=0; x< rooms.length; x++)
+		 {
+			 for( int y=0; y<rooms[x].length; y++])
+			 {
+				 System.out.println
+		 }
+	 }
+		   {System.out.print(rooms[i][j]);
+			  
+		   }
+			 System.out.println();
+	 }
 
 }

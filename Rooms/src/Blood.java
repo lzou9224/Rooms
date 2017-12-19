@@ -7,7 +7,7 @@ public class Blood {
 	private Person[] occupants;
 	
 	//print method, subject to change 
-	//fixed print by defining print in person -alyssa
+	//fixed print by defining print in person 
 	
 	public void print()
 	{
@@ -24,8 +24,7 @@ public class Blood {
 		else if(explored)
 			System.out.print("[b]");
 	}
-	
-	//do we need an item for the letters? -lingli
+
 	public Blood(int x, int y, boolean[] tubes, Person[] occupants)
 	{
 		//tubes = hallways??
