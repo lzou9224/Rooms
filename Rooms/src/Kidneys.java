@@ -19,6 +19,7 @@ public class Kidneys extends Mouth
 	{
 		System.out.println("Pop quiz! What is the purpose of your kidneys?");
 		
+		Scanner in = new Scanner(System.in);
 		
 		if(findKeyword(statement, "extract waste")>=0 )
 		{
