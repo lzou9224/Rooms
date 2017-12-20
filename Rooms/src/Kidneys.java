@@ -14,6 +14,12 @@ public class Kidneys extends Mouth
 		System.out.println("You have entered the Kidneys.");
 	}
 	
+	//question game type?
+	public static void kidneyGame()
+	{
+		System.out.println("Pop quiz! What is ");
+	}
+	
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
