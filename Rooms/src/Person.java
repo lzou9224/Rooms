@@ -8,8 +8,12 @@ public class Person {
 		return userName;
 	}
 	
-	public String getxLoc() {
-		return "(" + xLoc +"," + yLoc + ")";
+	public int getxLoc() {
+		return xLoc;
+	}
+	
+	public int getyLoc() {
+		return yLoc;
 	}
 
 	public void setUserName(String userName) {
@@ -37,9 +41,5 @@ public class Person {
 		System.out.print("[x]");
 	}
 	
-	public int vomittingPoints
-	{
-		
-	}
 
 }

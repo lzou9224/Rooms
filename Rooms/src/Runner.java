@@ -26,9 +26,10 @@ public class Runner {
 			}
 		}
 		//Mouth Room 
-		int a =(int)(3*building.length);
+		/*int a =(int)(3*building.length);
 		int b = (int)(3*building.length);
 		building[a][b] = new Mouth(a,b);
+		
 		
 		//Kidneys Room
 		int c = (int)(4*building.length);
@@ -45,17 +46,18 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new Bladder(x, y);
-		 
+*/
 		 //Setup player 1 and the input scanner
 		Scanner in = new Scanner(System.in);
-		System.out.println("Welcome to DONDE ESTAS EL AGUA?");
+		System.out.println("Welcome to 'DONDE ESTAS EL AGUA?'\nPlease enter a valid user name: ");
+		String userName = in.nextLine();
+		Person player1 = new Person(userName, 0, 0);
 		
-		Person player1 = new Person(getUserName(), 0,0);
 		building[0][0].enterRoom(player1);
 	
 		while(gameOn)  
 		{
-			System.out.println("Where would you like to move? (Choose N, S, E, W)");
+			System.out.println("Welcome, "+ player1 +"! Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
 			if(validMove(move, player1, building))
 			{
@@ -65,8 +67,6 @@ public class Runner {
 			else {
 				System.out.println("Please choose a valid move.");
 			}
-			
-			
 		}
 		in.close();
 	}
