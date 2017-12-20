@@ -12,17 +12,17 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		Blood[][] building = new Blood[5][5];
+		Room[][] building = new Room[5][5];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
 		{
-			Blood[] row = building[x];
+			Room[] row = building[x];
 			for (int y = 0; y < row.length; y++)
 			{
 				boolean[] tubes = {true, true, true, true};
 				Person[] occupants = {};
-				row[y] = new Blood(x,y, tubes, occupants);
+				row[y] = new Room(x,y, tubes, occupants);
 			}
 		}
 		//Mouth Room 
@@ -68,7 +68,7 @@ public class Runner {
 		in.close();
 	}
 	
-	public static boolean validMove(String move, Person p, Blood[][] map)
+	public static boolean validMove(String move, Person p, Room[][] map)
 	{
 		move = move.toLowerCase().trim();
 		switch (move) {

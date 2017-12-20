@@ -1,5 +1,5 @@
 
-public class Mouth extends Blood
+public class Mouth extends Room
 {
 	private boolean explored;
 	
