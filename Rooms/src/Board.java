@@ -26,26 +26,16 @@ public class Board {
 	    public void setBodyMap(Blood[][] bodyMap) {
 	        this.BodyMap = bodyMap;
 	    }
-	    
-<<<<<<< HEAD
+
 	 public void printBoard()
 	 {
-		 for(int x=0; x< rooms.length; x++)
+		 for(int x=0; x<Blood.length; x++)
 		 {
-			 for( int y=0; y<rooms[x].length; y++])
+			 for( int y=0; y<Blood[x].length; y++])
 			 {
-				 System.out.println
+				 System.out.println();
+
+	 }
 		 }
 	 }
-		   {System.out.print(rooms[i][j]);
-			  
-		   }
-			 System.out.println();
-=======
-	 public printBoard(int size)
-	 {
-		 
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
-	 }
-
 }
