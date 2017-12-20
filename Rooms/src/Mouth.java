@@ -42,21 +42,24 @@ public class Mouth extends Room
 	public static void askQuestion()
 	{
 		System.out.print("Which of the following does NOT cause damage to your tooth enamel?");
-		System.out.print("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
+		System.out.println("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
 		Scanner in = new Scanner(System.in);
 		String response= "";
-		int vomitpts;
+		boolean question = true; 
 		
-		while(response.length()>0)
+		while(true)
 		{
-			if(response=="D")
+			response = in.nextLine();
+
+			if(response.equals("D"))
 			{
 				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'U'");
+				question= false;
 			}
 			else
 			{
 				System.out.println(response + " is incorrect. Vomit point +10. Please try again!");
-				vomitpts++;
+				occupant.vomitpts;
 			}
 		}
 	}
