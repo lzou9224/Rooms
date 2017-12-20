@@ -34,6 +34,7 @@ public class Room {
         this.setOccupants(occupants);
         this.explored = false;
 	}
+
 	public void enterRoom(Person x)
 	{
 		System.out.println("You enter the bloodstream!");
