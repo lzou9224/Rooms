@@ -31,7 +31,7 @@ public class Runner {
 		//Mouth Room 
 		int a =(int)(3*building.length);
 		int b = (int)(3*building.length);
-		building[a][b] = new Mouth(a,b);
+		building[a][b] = new Mouth(a,b, null, null);
 		
 		//Kidneys Room
 		int c = (int)(4*building.length);
