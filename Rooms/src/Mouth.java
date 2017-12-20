@@ -37,8 +37,16 @@ public class Mouth extends Room
 
 	}
 	
-	public void askQuestions{
+	public static void askQuestions
+	{
+		System.out.print("Which of the following does NOT cause damage to your tooth enamel?");
+		System.out.print("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
 		
+		if()
+		{
+			vomiting points++;
+			
+		}
 	}
 	
 	public String toString()
