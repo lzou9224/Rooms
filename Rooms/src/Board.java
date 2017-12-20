@@ -29,7 +29,7 @@ public class Board {
 
 	 public void printBoard()
 	 {
-		 for(int x=0; x<Room.length; x++)
+		 for(int x=0; x<Room.xLoc; x++)
 		 {
 			 for( int y=0; y<BodyMap[x].length; y++)
 			 {
