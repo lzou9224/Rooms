@@ -10,6 +10,7 @@ public class Board {
 	 public void printBoard()
 	 {
 		 for(Room[] i : bodyMap)
+
 		 {
 			 for(Room j : i)
 			 {

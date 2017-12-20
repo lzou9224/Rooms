@@ -30,10 +30,14 @@ public class Runner {
 			}
 		}
 		
+
+		/** may or may not be necessary??
+		 *  
+>>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 		//Mouth Room 
 		/*int a =(int)(3*building.length);
 		int b = (int)(3*building.length);
-		building[a][b] = new Mouth(a,b);
+		building[a][b] = new Mouth(a,b, null, null);
 		
 		//Kidneys Room
 		int c = (int)(4*building.length);
@@ -49,7 +53,9 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new Bladder(x, y);
+<<<<<<< HEAD
 */
+
 		 //Setup player 1 and the input scanner
 		Scanner in = new Scanner(System.in); //initialize a scanner
 		

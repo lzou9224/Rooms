@@ -5,7 +5,7 @@ public class Mouth extends Room
 	private static final String x = null;
 	private boolean explored;
 	
-	public Mouth(int a, int b, boolean[] tubes, Person[] occupants) {
+	public Mouth(int a, int b) {
 		super(a, b, tubes, occupants);
 	}
 	
@@ -14,7 +14,7 @@ public class Mouth extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You have entered the mouth.");
+		System.out.println("Welcome to the mouth!");
 	}
 	
 	public void leaveRoom(Person x)
@@ -39,20 +39,30 @@ public class Mouth extends Room
 
 	}
 	
-	public static void askQuestion
+	public static void askQuestion()
 	{
 		System.out.print("Which of the following does NOT cause damage to your tooth enamel?");
-		System.out.print("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
+		System.out.println("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
 		Scanner in = new Scanner(System.in);
+		String response= "";
+		boolean question = true; 
 		
-		while()
+		while(true)
 		{
-			if(answer!="D")
+			response = in.nextLine();
+
+			if(response.equals("D"))
 			{
-				vomittingPoints
+				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'U'");
+				question= false;
+			}
+			else
+			{
+				System.out.println(response + " is incorrect. Vomit point +10. Please try again!");
+				occupant.vomitPts;
 			}
 		}
-
+	}
 	
 	public String toString()
 	{
