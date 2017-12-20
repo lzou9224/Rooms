@@ -1,8 +1,8 @@
 
 public class Intestines extends Room 
 {
-	public Intestines(int e, int f) {
-		super(e, f);
+	public Intestines(int x, int y) {
+		super(x, y);
 	}
 
 	@Override

@@ -1,6 +1,8 @@
 
 public class Mouth extends Room
 {
+	private boolean explored;
+	
 	public Mouth(int a, int b, boolean[] tubes, Person[] occupants) {
 		super(a, b, tubes, occupants);
 	}
@@ -34,28 +36,40 @@ public class Mouth extends Room
 	    }
 
 	}
-
-	    public String toString()
-	    {
-	    	boolean[] tubes = this.getTubes();
-	    	String response = "This is the mouth. It is connected to the ";
-	    	if (tubes[0])
-	    	{
-	    		response += "N";
-	    	}
+	
+	public static void askQuestions
+	{
+		System.out.print("Which of the following does NOT cause damage to your tooth enamel?");
+		System.out.print("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
+		
+		if()
+		{
+			vomiting points++;
+			
+		}
+	}
+	
+	public String toString()
+	{
+	   boolean[] tubes = this.getTubes();
+	   String response = "This is the mouth. It is connected to the ";
+	   if (tubes[0])
+	   {
+		   response += "N";
+	   }
+	   
+	   if(tubes[1]) {
+		   response += " and E";
+	   }
 	    	
-	    	if(tubes[1]) {
-	    		response += " and E";
-	    	}
+	   if (tubes[2]) {
+		   response += " and S";
+	   }
 	    	
-	    	if (tubes[2]) {
-	    		response += " and S";
-	    	}
-	    	
-	    	if (tubes[3]) {
-	    		response += " and W";
-	    	}
+	   if (tubes[3]) {
+		   response += " and W";
+	   }
 	    	
 	    	return response;
-	    }
+	   }
 }
