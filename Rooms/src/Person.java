@@ -1,6 +1,6 @@
 
 public class Person {
-	String userName;
+	static String userName;
 	int xLoc, yLoc;
 	int vomittingPoints;
 	
@@ -38,7 +38,7 @@ public class Person {
 	//testing out print method -alyssa
 	public void print()
 	{
-		System.out.print("[x]");
+		System.out.print("x");
 	}
 	
 

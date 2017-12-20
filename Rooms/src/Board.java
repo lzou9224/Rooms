@@ -1,41 +1,21 @@
 
 public class Board {
-	private Room[][] BodyMap;
-
-	public Board(Room[][] BodyMap)
-	    {
-	        this.BodyMap = BodyMap;
-	    }   
-
-	    public void printMap()
-	    {
-
-	        for(Room[] row : BodyMap)
-	        {
-	            for (Room room : row)
-	            {
-	                room.print();
-	            }
-	            System.out.println();
-	        }
-	    }
-	    public Room[][] getBodyMap() {
-	        return BodyMap;
-	    }
-
-	    public void setBodyMap(Room[][] bodyMap) {
-	        this.BodyMap = bodyMap;
-	    }
+	private static Room[][] bodyMap;
+	
+	public Board(Room[][] bodyMap)
+    {
+        Board.bodyMap = bodyMap;
+    }   
 
 	 public void printBoard()
 	 {
-		 for(int x=0; x<Room.length; x++)
+		 for(Room[] i : bodyMap)
 		 {
-			 for( int y=0; y<BodyMap[x].length; y++)
+			 for(Room j : i)
 			 {
-				 System.out.println();
-
-	 }
+				 j.print();
+			 }
+			 System.out.println();
 		 }
 	 }
 }

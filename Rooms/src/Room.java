@@ -4,8 +4,7 @@ public class Room {
 	int xLoc,yLoc;
 	private boolean explored = false;
 	private boolean[] tubes;
-	private Person[] occupants;
-	
+
 	//print method, subject to change 
 	//fixed print by defining print in person 
 	
@@ -13,7 +12,7 @@ public class Room {
 	{
 		if(!explored && occupant == null)
 		{
-			System.out.print("[]");
+			System.out.print("[ ]");
 		}
 		else if(occupant != null)
 		{
@@ -25,19 +24,23 @@ public class Room {
 			System.out.print("[-]");
 	}
 
-	public Room(int x, int y, boolean[] tubes, Person[] occupants)
+	public Room(int x, int y, boolean[] tubes, Person occupant)
 	{
 		//tubes = hallways??
 		this.xLoc = x;
 		this.yLoc = y;
         this.tubes = tubes;
-        this.setOccupants(occupants);
+        this.occupant = occupant;
         this.explored = false;
 	}
 
 	public void enterRoom(Person x)
 	{
-		System.out.println("You enter the bloodstream!");
+		System.out.println("You entered the mouth and is on the brink of being absorbed! YAY :)\n"
+							+ "Go through all of the ogans and gather letters to find the missing word.\n"
+							+ "The missing word will allow you to escape through the Bladder at the last row and last column.\n"
+							+ "Input the correct answers = letters! Input the incorrect letters = VOMIT POINTS\n"
+							+ "Once you have reached 5 vomit points... GAME OVER, YOU GO BACK TO THE MOUTH AND VOMIT AHAHAHAH");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
@@ -47,7 +50,6 @@ public class Room {
     {
     	return tubes;
     }
-
 	
 	public void leaveRoom(Person x)
 	{
@@ -55,13 +57,5 @@ public class Room {
 	}
 
 
-	public Person[] getOccupants() {
-		return occupants;
-	}
-
-
-	public void setOccupants(Person[] occupants) {
-		this.occupants = occupants;
-	}
 	
 }
