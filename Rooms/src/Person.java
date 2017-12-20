@@ -1,30 +1,31 @@
-//Lingli Zou
 
 public class Person {
-	String firstName;
-	String familyName;
+	String userName;
 	int xLoc, yLoc;
 	
-	public int getxLoc() {
-		return xLoc;
+	public String getUserName() {
+		return userName;
+	}
+	
+	public String getxLoc() {
+		return "(" + xLoc +"," + yLoc + ")";
 	}
 
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	
 	public void setxLoc(int xLoc) {
 		this.xLoc = xLoc;
-	}
-
-	public int getyLoc() {
-		return yLoc;
 	}
 
 	public void setyLoc(int yLoc) {
 		this.yLoc = yLoc;
 	}
 
-	public Person (String firstName, String familyName, int xLoc, int yLoc)
+	public Person (String userName, int xLoc, int yLoc)
 	{
-		this.firstName = firstName;
-		this.familyName = familyName;
+		this.userName = userName;
 		this.xLoc = xLoc;
 		this.yLoc = yLoc;
 	}

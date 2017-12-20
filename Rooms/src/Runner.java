@@ -47,9 +47,12 @@ public class Runner {
 		building[x][y] = new Bladder(x, y);
 		 
 		 //Setup player 1 and the input scanner
-		Person player1 = new Person("FirstName", "FamilyName", 0,0);
-		building[0][0].enterRoom(player1);
 		Scanner in = new Scanner(System.in);
+		System.out.println("Welcome to DONDE ESTAS EL AGUA?");
+		
+		Person player1 = new Person(getUserName(), 0,0);
+		building[0][0].enterRoom(player1);
+	
 		while(gameOn)
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");

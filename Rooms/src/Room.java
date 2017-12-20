@@ -22,7 +22,7 @@ public class Room {
 			System.out.print("]");
 		}
 		else if(explored)
-			System.out.print("[b]");
+			System.out.print("[-]");
 	}
 
 	public Room(int x, int y, boolean[] tubes, Person[] occupants)
