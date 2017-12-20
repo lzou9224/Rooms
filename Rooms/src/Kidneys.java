@@ -17,7 +17,7 @@ public class Kidneys extends Mouth
 	//question game type?
 	public static void kidneyGame()
 	{
-		System.out.println("Pop quiz! What is ");
+		System.out.println("Pop quiz! What is the purpose of your kidneys?");
 	}
 	
 	public void leaveRoom(Person x)
