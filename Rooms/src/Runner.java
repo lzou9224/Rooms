@@ -25,6 +25,9 @@ public class Runner {
 				row[y] = new Room(x,y, tubes, occupants);
 			}
 		}
+		
+		/** may or may not be necessary??
+		 *  
 		//Mouth Room 
 		int a =(int)(3*building.length);
 		int b = (int)(3*building.length);
@@ -45,6 +48,8 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new Bladder(x, y);
+		*/
+		
 		 
 		 //Setup player 1 and the input scanner
 		Scanner in = new Scanner(System.in);
