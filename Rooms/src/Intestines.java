@@ -25,7 +25,7 @@ public class Intestines extends Room
 		
 		Scanner in = new Scanner(System.in);
 		
-		if(user input = sum)
+		if(user.input = sum)
 		{
 			System.out.println("You're right! Good job. Here's the next letter.");
 			
