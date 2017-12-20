@@ -1,5 +1,5 @@
 
-public class Blood {
+public class Room {
 	Person occupant;
 	int xLoc,yLoc;
 	private boolean explored = false;
@@ -25,7 +25,7 @@ public class Blood {
 			System.out.print("[b]");
 	}
 
-	public Blood(int x, int y, boolean[] tubes, Person[] occupants)
+	public Room(int x, int y, boolean[] tubes, Person[] occupants)
 	{
 		//tubes = hallways??
 		this.xLoc = x;

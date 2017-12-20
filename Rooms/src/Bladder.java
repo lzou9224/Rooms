@@ -1,5 +1,5 @@
 
-public class Bladder extends Blood 
+public class Bladder extends Room 
 {
 	public Bladder(int x, int y) {
 		super(x, y);

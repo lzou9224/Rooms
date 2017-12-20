@@ -1,5 +1,5 @@
 
-public class Mouth extends Blood
+public class Mouth extends Room
 {
 	public Mouth(int a, int b, boolean[] tubes, Person[] occupants) {
 		super(a, b, tubes, occupants);

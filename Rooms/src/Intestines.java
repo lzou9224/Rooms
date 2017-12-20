@@ -1,5 +1,5 @@
 
-public class Intestines extends Blood 
+public class Intestines extends Room 
 {
 	public Intestines(int e, int f) {
 		super(e, f);
