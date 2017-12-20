@@ -53,7 +53,7 @@ public class Runner {
 		Person player1 = new Person(getUserName(), 0,0);
 		building[0][0].enterRoom(player1);
 	
-		while(gameOn)
+		while(gameOn)  
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
 			String move = in.nextLine();
