@@ -1,6 +1,8 @@
 
 public class Mouth extends Blood
 {
+	private boolean explored;
+	
 	public Mouth(int a, int b, boolean[] tubes, Person[] occupants) {
 		super(a, b, tubes, occupants);
 	}
