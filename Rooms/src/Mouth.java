@@ -1,6 +1,8 @@
+import java.util.Scanner;
 
 public class Mouth extends Room
 {
+	private static final String x = null;
 	private boolean explored;
 	
 	public Mouth(int a, int b, boolean[] tubes, Person[] occupants) {
@@ -37,17 +39,20 @@ public class Mouth extends Room
 
 	}
 	
-	public static void askQuestions
+	public static void askQuestion
 	{
 		System.out.print("Which of the following does NOT cause damage to your tooth enamel?");
 		System.out.print("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
+		Scanner in = new Scanner(System.in);
 		
-		if()
+		while()
 		{
-			vomiting points++;
-			
+			if(answer!="D")
+			{
+				vomittingPoints
+			}
 		}
-	}
+
 	
 	public String toString()
 	{

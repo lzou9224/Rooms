@@ -2,6 +2,7 @@
 public class Person {
 	String userName;
 	int xLoc, yLoc;
+	int vomittingPoints;
 	
 	public String getUserName() {
 		return userName;
@@ -34,6 +35,11 @@ public class Person {
 	public void print()
 	{
 		System.out.print("[x]");
+	}
+	
+	public int vomittingPoints
+	{
+		
 	}
 
 }
