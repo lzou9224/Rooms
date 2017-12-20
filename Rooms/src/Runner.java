@@ -65,7 +65,7 @@ public class Runner {
 		
 		while(gameOn)  
 		{	
-			gb.printBoard();
+			gb.printBoard();  
 			System.out.println("Where would you like to move? Use the 'W','A','S','D' keys :D");
 			String move = in.nextLine();
 			
