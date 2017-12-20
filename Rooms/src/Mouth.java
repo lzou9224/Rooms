@@ -59,7 +59,7 @@ public class Mouth extends Room
 			else
 			{
 				System.out.println(response + " is incorrect. Vomit point +10. Please try again!");
-				occupant.vomitpts;
+				occupant.vomitPts;
 			}
 		}
 	}
