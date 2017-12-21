@@ -5,8 +5,8 @@ public class Mouth extends Room
 	private static final String x = null;
 	private boolean explored;
 	
-	public Mouth(int a, int b) {
-		super(a, b, tubes, occupants);
+	public Mouth(int x, int y, boolean[] tubes, Person occupant) {
+		super(x, y, tubes, occupant);
 	}
 	
 	@Override
@@ -24,9 +24,9 @@ public class Mouth extends Room
 	
 	public void print()
 	{
-		if (getOccupants().length != 0)
+		if (getOccupant().length != 0)
 	    {
-	      System.out.println(getOccupants()[0].print());
+	      System.out.println(getOccupant()[0].print());
 	    }
 	    else if (this.explored)
 	    {

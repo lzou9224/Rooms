@@ -35,18 +35,15 @@ public class Person {
 		this.yLoc = yLoc;
 	}
 	
-	//testing out print method -alyssa
 	public void print()
 	{
 		System.out.print("x");
 	}
 	
-<<<<<<< HEAD
-=======
+
 	public void vomitPts
 	{
 		
 	}
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 
 }
