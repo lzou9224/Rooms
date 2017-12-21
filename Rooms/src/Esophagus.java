@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class Mouth extends Room
+public class Esophagus extends Room
 {
 	private static final String x = null;
 	private boolean explored;
 	
-	public Mouth(int a, int b) {
-		super(a, b, tubes, occupants);
+	public Esophagus(int x, int y, boolean[] tubes, Person occupant) {
+		super(x, y, tubes, occupant);
 	}
 	
 	@Override
@@ -14,7 +14,7 @@ public class Mouth extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Welcome to the mouth!");
+		System.out.println("Welcome to the ESOPHAGUS! DRINK DRINK DRINK");
 	}
 	
 	public void leaveRoom(Person x)
@@ -24,9 +24,9 @@ public class Mouth extends Room
 	
 	public void print()
 	{
-		if (getOccupants().length != 0)
+		if (getOccupant().length != 0)
 	    {
-	      System.out.println(getOccupants()[0].print());
+	      System.out.println(getOccupant()[0].print());
 	    }
 	    else if (this.explored)
 	    {

@@ -26,7 +26,6 @@ public class Room {
 
 	public Room(int x, int y, boolean[] tubes, Person occupant)
 	{
-		//gyujyug
 		//tubes = hallways??
 		this.xLoc = x;
 		this.yLoc = y;
@@ -37,11 +36,6 @@ public class Room {
 
 	public void enterRoom(Person x)
 	{
-		System.out.println("You entered the mouth and is on the brink of being absorbed! YAY :)\n"
-							+ "Go through all of the ogans and gather letters to find the missing word.\n"
-							+ "The missing word will allow you to escape through the Bladder at the last row and last column.\n"
-							+ "Input the correct answers = letters! Input the incorrect letters = VOMIT POINTS\n"
-							+ "Once you have reached 5 vomit points... GAME OVER, YOU GO BACK TO THE MOUTH AND VOMIT AHAHAHAH");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);

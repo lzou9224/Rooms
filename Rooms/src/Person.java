@@ -34,9 +34,10 @@ public class Person {
 		this.yLoc = yLoc;
 	}
 	
-	//testing out print method -alyssa
 	public void print()
 	{
 		System.out.print("x");
 	}
+	
+
 }
