@@ -26,6 +26,7 @@ public class Room {
 
 	public Room(int x, int y, boolean[] tubes, Person occupant)
 	{
+		//gyujyug
 		//tubes = hallways??
 		this.xLoc = x;
 		this.yLoc = y;
