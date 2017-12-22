@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 
 public class Person {
 	static String userName;
@@ -39,5 +41,12 @@ public class Person {
 		System.out.print("x");
 	}
 	
+	public static void vomitPts{
+		int sum=0; 
+		for( int x=0; x<5; x++)
+		{
+			sum += x;
+		}
+	}
 
 }

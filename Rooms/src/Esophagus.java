@@ -24,7 +24,7 @@ public class Esophagus extends Room
 	
 	public void print()
 	{
-		if (getOccupant().length != 0)
+		if (getoccupant().length != 0)
 	    {
 	      System.out.println(getOccupant()[0].print());
 	    }
