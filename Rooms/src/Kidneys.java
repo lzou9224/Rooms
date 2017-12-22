@@ -1,5 +1,5 @@
 //Alyssa
-public class Kidneys extends Mouth
+public class Kidneys extends Room
 
 {
 	public Kidneys(int c, int d) {
@@ -17,11 +17,16 @@ public class Kidneys extends Mouth
 	//question game type?
 	public static void kidneyGame()
 	{
-		System.out.println("Pop quiz! What is the purpose of your kidneys?");
+		System.out.println("Pop quiz! How many kidneys do you have?");
 		
 		Scanner in = new Scanner(System.in);
 		
-		if(findKeyword(statement, "extract waste")>=0 )
+		if(findKeyword(statement, "2")>=0 )
+		{
+			System.out.println("Good job. You are correct. You may proceed.");
+		}
+
+		if(findKeyword(statement, "two")>=0 )
 		{
 			System.out.println("Good job. You are correct. You may proceed.");
 		}
