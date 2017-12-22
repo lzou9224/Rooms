@@ -1,3 +1,4 @@
+//LingLi
 import java.util.Scanner;
 
 public class Esophagus extends Room
@@ -24,7 +25,7 @@ public class Esophagus extends Room
 	
 	public void print()
 	{
-		if (getoccupant().length != 0)
+		if (getOccupant().length != 0)
 	    {
 	      System.out.println(getOccupant()[0].print());
 	    }
