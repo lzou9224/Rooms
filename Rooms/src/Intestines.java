@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 //Alyssa
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 
 import java.util.Scanner;
 
@@ -40,7 +46,7 @@ public class Intestines extends Room
 		{
 			System.out.println("Wrong. Increased risk of vomitting.");
 			
-			vomitpts++;
+			vomitpts++; 
 		}
 		
 	}
