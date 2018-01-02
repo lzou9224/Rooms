@@ -17,11 +17,12 @@ public class Kidneys extends Room
 	}
 	
 	//question game type?
-	public static void kidneyGame()
+	public static void kidneyGame(String statement)
 	{
 		System.out.println("Pop quiz! How many kidneys do you have?");
 		
 		Scanner in = new Scanner(System.in);
+		
 		
 		if(findKeyword(statement, "2")>=0 )
 		{
@@ -40,7 +41,36 @@ public class Kidneys extends Room
 		}
 		
 	}
-	
+	private static int findKeyword(String statement, String string) {
+		// TODO Auto-generated method stub
+		
+		
+		return -1;
+	}
+
+	public String toString()
+	{
+	   boolean[] tubes = this.getTubes();
+	   String response = "These are the kidneys. They are connected to the ";
+	   if (tubes[0])
+	   {
+		   response += "N";
+	   }
+	   
+	   if(tubes[1]) {
+		   response += " and E";
+	   }
+	    	
+	   if (tubes[2]) {
+		   response += " and S";
+	   }
+	    	
+	   if (tubes[3]) {
+		   response += " and W";
+	   }
+	    	
+	    	return response;
+	   }
 	public void leaveRoom(Person x)
 	{
 		occupant = null;

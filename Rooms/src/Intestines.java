@@ -1,5 +1,6 @@
 
 //Alyssa
+
 import java.util.Scanner;
 
 public class Intestines extends Room 
@@ -19,10 +20,12 @@ public class Intestines extends Room
 	//testing out math question
 	public static void mathv1()
 	{
-		double a = (Math.random()*10);
-		double b = (Math.random()*10);
+		int a = (int)(Math.random()*10);
+		int b = (int)(Math.random()*10);
 		
 		double sum = a + b;
+		
+		
 		System.out.println("Time for a math question!");
 		
 		Scanner in = new Scanner(System.in);
@@ -56,7 +59,29 @@ public class Intestines extends Room
 	    }
 
 	}
-	
+	public String toString()
+	{
+	   boolean[] tubes = this.getTubes();
+	   String response = "These are the intestines. They are connected to the ";
+	   if (tubes[0])
+	   {
+		   response += "N";
+	   }
+	   
+	   if(tubes[1]) {
+		   response += " and E";
+	   }
+	    	
+	   if (tubes[2]) {
+		   response += " and S";
+	   }
+	    	
+	   if (tubes[3]) {
+		   response += " and W";
+	   }
+	    	
+	    	return response;
+	   }
 	
 	
 	
