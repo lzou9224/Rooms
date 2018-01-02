@@ -1,4 +1,3 @@
-//Alyssa
 import java.util.Scanner;
 
 public class Intestines extends Room 

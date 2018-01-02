@@ -1,4 +1,3 @@
-//Alyssa
 public class Kidneys extends Room
 
 {

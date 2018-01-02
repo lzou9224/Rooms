@@ -1,4 +1,3 @@
-//LingLi
 import java.util.Scanner;
 
 public class Esophagus extends Room
@@ -15,7 +14,7 @@ public class Esophagus extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Welcome to the ESOPHAGUS! DRINK DRINK DRINK");
+		System.out.println("Welcome to the ESOPHAGUS!");
 	}
 	
 	public void leaveRoom(Person x)
@@ -42,8 +41,8 @@ public class Esophagus extends Room
 	
 	public static void askQuestion()
 	{
-		System.out.print("Which of the following does NOT cause damage to your tooth enamel?");
-		System.out.println("A) Orange Juice B) Lips and tongue piercing C) Red wine D) None of the above");
+		System.out.print("What does the esophagus say to the trachea when water comes?");
+		System.out.println("A) Run away! B) I will protect you C) DRINK DRINK DRINK! D) Loosen up man");
 		Scanner in = new Scanner(System.in);
 		String response= "";
 		boolean question = true; 
@@ -52,7 +51,7 @@ public class Esophagus extends Room
 		{
 			response = in.nextLine();
 
-			if(response.equals("D"))
+			if(response.equals("C"))
 			{
 				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'U'");
 				question= false;
