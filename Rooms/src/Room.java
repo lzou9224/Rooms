@@ -1,4 +1,4 @@
-
+//Lingli 
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;
@@ -41,16 +41,25 @@ public class Room {
 		x.setyLoc(this.yLoc);
 	}
 	
+	//tubes=doors
     public boolean[] getTubes()
     {
     	return tubes;
     }
 	
+    public Person getOccupant() {
+        return occupant;
+    }
+
+    public void setOccupants(Person occupant) {
+        this.occupant = occupant;
+    }
+
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
+		
 	}
-
 
 	
 }
