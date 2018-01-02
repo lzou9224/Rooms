@@ -5,7 +5,7 @@ public class Esophagus extends Room
 	private static final String x = null;
 	private boolean explored;
 	
-	public Esophagus(int x, int y, boolean[] tubes, Person [] occupant) {
+	public Esophagus(int x, int y, boolean[] tubes, Person occupant) {
 		super(x, y, tubes, occupant);
 	}
 	
@@ -24,9 +24,9 @@ public class Esophagus extends Room
 	
 	public void print()
 	{
-		if (getOccupant().length != 0)
+		if (getOccupant().yLoc != 0)
 	    {
-	      System.out.print(getOccupant()[0].print();
+	      System.out.print(getOccupant().print();
 	    }
 	    else if (this.explored)
 	    {
