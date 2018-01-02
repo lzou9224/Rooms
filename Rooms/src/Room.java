@@ -1,6 +1,6 @@
 
 public class Room {
-	Person occupant;
+	Person[] occupant;
 	int xLoc,yLoc;
 	private boolean explored = false;
 	private boolean[] tubes;
@@ -24,7 +24,7 @@ public class Room {
 			System.out.print("[-]");
 	}
 
-	public Room(int x, int y, boolean[] tubes, Person occupant)
+	public Room(int x, int y, boolean[] tubes, Person[] occupant)
 	{
 		//tubes = hallways??
 		this.xLoc = x;
@@ -34,7 +34,7 @@ public class Room {
         this.explored = false;
 	}
 
-	public void enterRoom(Person x)
+	public void enterRoom(Person[] x)
 	{
 		occupant = x;
 		x.setxLoc(this.xLoc);
@@ -46,9 +46,18 @@ public class Room {
     	return tubes;
     }
 	
+    public Person[] getOccupant() {
+        return occupant;
+    }
+
+    public void setOccupants(Person[] occupant) {
+        this.occupant = occupant;
+    }
+
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
+		
 	}
 
 
