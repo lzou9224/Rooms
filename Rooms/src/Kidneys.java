@@ -1,9 +1,11 @@
 //Alyssa
+
+import java.util.Scanner;
 public class Kidneys extends Room
 
 {
-	public Kidneys(int c, int d) {
-		super(c, d);
+	public Kidneys(int x, int y, boolean[] tubes, Person occupant) {
+		super(x, y, tubes, occupant);
 	}
 	
 	@Override

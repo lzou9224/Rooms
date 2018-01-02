@@ -1,10 +1,11 @@
+
 //Alyssa
 import java.util.Scanner;
 
 public class Intestines extends Room 
 {
-	public Intestines(int x, int y) {
-		super(x, y);
+	public Intestines(int x, int y, boolean[] tubes, Person occupant) {
+		super(x, y, tubes, occupant);
 	}
 
 	@Override
@@ -39,7 +40,22 @@ public class Intestines extends Room
 		}
 		
 	}
-	
+	public void print()
+	{
+		if (getOccupant().length != 0)
+	    {
+	      System.out.println(getOccupant()[0].print());
+	    }
+	    else if (this.explored)
+	    {
+	      System.out.print("[ H ]");
+	    }
+	    else
+	    {
+	      System.out.print("[   ]");
+	    }
+
+	}
 	
 	
 	
