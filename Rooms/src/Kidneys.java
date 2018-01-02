@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 //Alyssa
 
 import java.util.Scanner;
+=======
+>>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 public class Kidneys extends Room
 
 {

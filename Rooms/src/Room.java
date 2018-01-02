@@ -46,11 +46,19 @@ public class Room {
     	return tubes;
     }
 	
+    public Person getOccupant() {
+        return occupant;
+    }
+
+    public void setOccupants(Person occupant) {
+        this.occupant = occupant;
+    }
+
 	public void leaveRoom(Person x)
 	{
 		occupant = null;
+		
 	}
-
 
 	
 }
