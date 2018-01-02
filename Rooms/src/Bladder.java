@@ -1,8 +1,21 @@
 //Lily
+//1/2 put a value to vomitpts
 import java.util.Scanner;
 
 public class Bladder extends Room 
 {
+	public static int bladderVomitPts;
+	
+	public static int getBladderVomitPts() {
+		return bladderVomitPts;
+	}
+
+	public static int getBVomitPts(int vomitPts) {
+		vomitPts = getBladderVomitPts();
+		bladderVomitPts += vomitPts;
+		return bladderVomitPts;
+	}
+
 	public Bladder(int x, int y, boolean[] tubes, Person occupant) {
 		super(x, y, tubes, occupant);
 		// TODO Auto-generated constructor stub

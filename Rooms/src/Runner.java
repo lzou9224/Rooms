@@ -12,10 +12,12 @@ public class Runner {
 
 	private static boolean gameOn = true;
 	
+	
 	public static void main(String[] args)
 	{
 		Room[][] building = new Room[5][5];
 		Board gb = new Board(building);
+		int vomitPts = Bladder.getBladderVomitPts();
 
 		
 		//Fill the building with normal rooms
@@ -29,32 +31,6 @@ public class Runner {
 				row[y] = new Room(x,y, tubes, occupants);
 			}
 		}
-		
-
-		/** may or may not be necessary??
-		 *  
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
-		//Mouth Room 
-		/*int a =(int)(3*building.length);
-		int b = (int)(3*building.length);
-		building[a][b] = new Mouth(a,b, null, null);
-		
-		//Kidneys Room
-		int c = (int)(4*building.length);
-		int d = (int)(6*building.length);
-		building[c][d] = new Kidneys(c,d);
-
-		//Intestines Room
-		int e = (int)(2*building.length);
-		int f = (int)(8*building.length);
-		building[e][f] = new Intestines(e,f);
-		
-		//Create a random winning room.
-		int x = (int)(Math.random()*building.length);
-		int y = (int)(Math.random()*building.length);
-		building[x][y] = new Bladder(x, y);
-<<<<<<< HEAD
-*/
 
 		 //Setup player 1 and the input scanner
 		Scanner in = new Scanner(System.in); //initialize a scanner
@@ -62,7 +38,7 @@ public class Runner {
 		//obtain Username from the player
 		System.out.println("Welcome to 'DONDE ESTAS EL AGUA?'\nPlease enter your Username: ");
 		String userName = in.nextLine();
-		Person player1 = new Person(userName, 0, 0);
+		Person player1 = new Person(userName, 0, 0, vomitPts);
 		String p1Name = player1.getUserName();
 		
 		building[0][0].enterRoom(player1); //Player always starts at 0,0.
@@ -83,7 +59,7 @@ public class Runner {
 			
 			if(validMove(move, player1, building))
 			{
-				System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
+				System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
 			}
 			
 			else {
