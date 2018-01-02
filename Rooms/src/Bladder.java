@@ -20,7 +20,7 @@ public class Bladder extends Room
 		super(x, y, tubes, occupant);
 		// TODO Auto-generated constructor stub
 	} 
-	
+	  
 	@Override
 	public void enterRoom(Person x) {
 		// TODO Auto-generated method stub
