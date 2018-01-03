@@ -28,7 +28,7 @@ public class Bladder extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You just eneterd the bladder!!!");
+		System.out.println("\nYou just eneterd the bladder!!!");
 		//if answer is wrong
 		vomit++;
 		
@@ -37,10 +37,14 @@ public class Bladder extends Room
 		
 		//Input the correct keyword
 		
-		
-		System.out.println("You found the winning room! Ten points for Gryffindor.");
+		//scanner to exit and go back to the runner
+		System.out.println("LALALAL THIS WORKS.....Would you like to exit? Y or N");
 		Runner.gameOff();
 	}
 	
+	public void print()
+	{
+		System.out.print("b");
+	}
 
 }

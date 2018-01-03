@@ -11,7 +11,14 @@ public class Room {
 	{
 		if(!explored && occupant == null)
 		{
-			System.out.print("[ ]");
+			if(this.xLoc == 1 && this.yLoc == 2) 
+			{
+				System.out.print("[B]");
+			}
+			else 
+			{
+				System.out.print("[ ]");
+			}
 		}
 		else if(occupant != null)
 		{
@@ -20,7 +27,10 @@ public class Room {
 			System.out.print("]");
 		}
 		else if(explored)
+		{
 			System.out.print("[-]");
+		}
+		
 	}
 
 	public Room(int x, int y, boolean[] tubes, Person occupant, boolean explored)

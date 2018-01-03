@@ -18,7 +18,7 @@ public class Runner {
 		Room[][] building = new Room[5][5];
 		Board gb = new Board(building);
 		int vomitPts = Bladder.getBladderVomitPts();
-
+		Bladder bladder;
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x < building.length; x++)
@@ -57,14 +57,18 @@ public class Runner {
 		{	
 			gb.printBoard();   
 			String move = in.nextLine();
-			 
+
 			if(validMove(move, player1, building))
 			{
-				//if player inputs a valid move, then indicate whether the player entered a room.
-				if(explored == true) {
-					Bladder.enterRoom(player1);
-				}
+				//if player inputs a valid move, then indicate whether the player entered a room
 				System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
+				
+				// if the player's coordinate is at row = 1, col = 2, then the player will enter the bladder
+				if(player1.getxLoc() == 1 && player1.getyLoc()==2) {
+					gb.printBoard();  
+					bladder = new Bladder(player1.getxLoc(), player1.getyLoc(), null, player1, gameOn);
+					bladder.enterRoom(player1);
+				}
 			}
 			
 			else {
