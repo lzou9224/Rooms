@@ -16,18 +16,24 @@ public class Bladder extends Room
 		return bladderVomitPts;
 	}
 
-	public Bladder(int x, int y, boolean[] tubes, Person occupant) {
-		super(x, y, tubes, occupant);
+	public Bladder(int x, int y, boolean[] tubes, Person occupant, boolean explored) {
+		super(x, y, tubes, occupant,explored);
 		// TODO Auto-generated constructor stub
 	} 
 	  
 	@Override
 	public void enterRoom(Person x) {
 		// TODO Auto-generated method stub
+		int vomit = 0;
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
+		System.out.println("You just eneterd the bladder!!!");
+		//if answer is wrong
+		vomit++;
 		
+		//at the end
+		getBVomitPts(vomit);
 		
 		//Input the correct keyword
 		

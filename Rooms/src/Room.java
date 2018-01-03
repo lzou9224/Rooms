@@ -24,7 +24,7 @@ public class Room {
 			System.out.print("[-]");
 	}
 
-	public Room(int x, int y, boolean[] tubes, Person occupant)
+	public Room(int x, int y, boolean[] tubes, Person occupant, boolean explored)
 	{
 		//tubes = hallways??
 		this.xLoc = x;

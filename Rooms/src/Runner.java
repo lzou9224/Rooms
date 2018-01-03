@@ -27,8 +27,9 @@ public class Runner {
 			for (int y = 0; y < row.length; y++)
 			{
 				boolean[] tubes = {true, true, true, true};
+				boolean explored = false;
 				Person occupants = null;
-				row[y] = new Room(x,y, tubes, occupants);
+				row[y] = new Room(x,y, tubes, occupants,explored);
 			}
 		}
 
@@ -56,9 +57,13 @@ public class Runner {
 		{	
 			gb.printBoard();   
 			String move = in.nextLine();
-			
+			 
 			if(validMove(move, player1, building))
 			{
+				//if player inputs a valid move, then indicate whether the player entered a room.
+				if(explored == true) {
+					Bladder.enterRoom(player1);
+				}
 				System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
 			}
 			
