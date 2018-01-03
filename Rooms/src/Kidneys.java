@@ -45,6 +45,15 @@ public class Kidneys extends Room
 		}
 		
 	}
+	
+	//simple trivia game type, returns letter if correct, else increases vomit pts.
+	
+	private String kGame()
+	{
+		
+	}
+	
+	
 	private static int findKeyword(String statement, String string) {
 		// TODO Auto-generated method stub
 		

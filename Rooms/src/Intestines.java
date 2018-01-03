@@ -1,6 +1,4 @@
-
 //Alyssa
-
 
 import java.util.Scanner;
 
@@ -18,7 +16,7 @@ public class Intestines extends Room
 		System.out.println("You have entered the Kidneys.");
 	}
 	
-	//testing out math question
+	//multiplication question, returns letter if correct, else increases vomit pts.
 	private String mathv1()
 	{
 		Scanner in = new Scanner(System.in);
