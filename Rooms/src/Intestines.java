@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 //Alyssa
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 
 import java.util.Scanner;
 
@@ -25,29 +19,32 @@ public class Intestines extends Room
 	}
 	
 	//testing out math question
-	public static void mathv1()
+	private String mathv1()
 	{
-		int a = (int)(Math.random()*10);
-		int b = (int)(Math.random()*10);
-		
-		double sum = a + b;
-		
-		
-		System.out.println("Time for a math question!");
-		
 		Scanner in = new Scanner(System.in);
+		System.out.println("Here's a math question. Answer this correctly, or risk vomitting.");
 		
-		if(user.input = sum)
+		int a = (int)(Math.random()*201);
+		int b = (int)(Math.random()*101);
+		double result = a * b;
+		int guess;
+		boolean right = false;
+		while(right == false)
 		{
-			System.out.println("You're right! Good job. Here's the next letter.");
+			guess = in.nextInt();
 			
+			if(guess == result)
+			{
+				right = true;
+				System.out.println("Correct. Your next letter is W.");
+			}
+			else if(guess != result)
+			{
+				System.out.println("Wrong. Increased risk of vomitting.");
+			}
 		}
-		else
-		{
-			System.out.println("Wrong. Increased risk of vomitting.");
-			
-			vomitpts++; 
-		}
+		return("Move along now."); 
+		
 		
 	}
 	public void print()

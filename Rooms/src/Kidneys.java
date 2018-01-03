@@ -1,12 +1,8 @@
 
 //Alyssa
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-//Alyssa
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
+//returns letter R if correct
+
 import java.util.Scanner;
 
 public class Kidneys extends Room
