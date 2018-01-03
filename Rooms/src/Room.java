@@ -1,4 +1,4 @@
-//Lingli 
+//Lingli Zou
 public class Room {
 	Person occupant;
 	int xLoc,yLoc;
@@ -7,7 +7,6 @@ public class Room {
 
 	//print method, subject to change 
 	//fixed print by defining print in person 
-	
 	public void print()
 	{
 		if(!explored && occupant == null)
@@ -26,10 +25,9 @@ public class Room {
 
 	public Room(int x, int y, boolean[] tubes, Person occupant, boolean explored)
 	{
-		//tubes = hallways??
 		this.xLoc = x;
 		this.yLoc = y;
-        this.tubes = tubes;
+        this.tubes = tubes;  //tubes = doors
         this.occupant = occupant;
         this.explored = false;
 	}
@@ -41,7 +39,6 @@ public class Room {
 		x.setyLoc(this.yLoc);
 	}
 	
-	//tubes=doors
     public boolean[] getTubes()
     {
     	return tubes;

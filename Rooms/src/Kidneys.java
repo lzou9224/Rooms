@@ -1,5 +1,12 @@
 
+<<<<<<< HEAD
 //Alyssa
+=======
+//Alyssa
+
+//returns letter R if correct
+
+>>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 import java.util.Scanner;
 
 public class Kidneys extends Room
@@ -42,6 +49,15 @@ public class Kidneys extends Room
 		}
 		
 	}
+	
+	//simple trivia game type, returns letter if correct, else increases vomit pts.
+	
+	private String kGame()
+	{
+		
+	}
+	
+	
 	private static int findKeyword(String statement, String string) {
 		// TODO Auto-generated method stub
 		
