@@ -1,12 +1,12 @@
 //Lingli Zou
 import java.util.Scanner;
 
-public class Esophagus extends Room
+public class Liver extends Room
 {
 	private static final String x = null;
 	private boolean explored;
 	
-	public Esophagus(int x, int y, boolean[] tubes, Person occupant) {
+	public Liver(int x, int y, boolean[] tubes, Person occupant) {
 		super(x, y, tubes, occupant);
 	}
 	
@@ -15,7 +15,7 @@ public class Esophagus extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Welcome to the ESOPHAGUS!");
+		System.out.println("Welcome to the TU LIVER >;)!");
 	}
 	
 	public void leaveRoom(Person x)
@@ -27,7 +27,7 @@ public class Esophagus extends Room
 	{
 		if (getOccupant().yLoc != 0)
 	    {
-	      System.out.print(getOccupant().print();
+	      System.out.println(getOccupant().print();
 	    }
 	    else if (this.explored)
 	    {
@@ -42,9 +42,9 @@ public class Esophagus extends Room
 
 	public static void askQuestion()
 	{
-		//individualized trivia question for the esophagus
-		System.out.print("What does the esophagus say to the trachea when water comes?");
-		System.out.println("A) Run away! B) I will protect you C) DRINK DRINK DRINK! D) Loosen up man");
+		//individualized trivia question for the liver
+		System.out.print("As the largest organ in your body, what % of water is your liver consist of?");
+		System.out.println("A) 45% B) 68% C) 85% D) 96%");
 		Scanner in = new Scanner(System.in);
 		String response= "";
 		boolean question = true; 
@@ -53,9 +53,9 @@ public class Esophagus extends Room
 		{
 			response = in.nextLine();
 
-			if(response.equals("C"))
+			if(response.equals("D"))
 			{
-				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'A'");
+				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'T'");
 				question= false;
 			}
 			else
@@ -70,7 +70,7 @@ public class Esophagus extends Room
 	public String toString()
 	{
 	   boolean[] tubes = this.getTubes();
-	   String response = "This is the esophagus. It is connected to the ";
+	   String response = "This is the liver. It is connected to the ";
 	   if (tubes[0])
 	   {
 		   response += "N";

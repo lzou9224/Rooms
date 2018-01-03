@@ -1,7 +1,7 @@
 //Lingli Zou
 //Lily Li
 //Alyssa Ma
-//** Donde estas el agua?
+//**Text-Based Adventure Project: Donde estas el agua?
 
 //IF TIME: ADD clear console, 
 
