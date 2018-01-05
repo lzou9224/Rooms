@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Intestines extends Room 
 {
-	public Intestines(int x, int y, boolean[] tubes, Person occupant) {
-		super(x, y, tubes, occupant);
+	public Intestines(int x, int y, boolean[] tubes, Person occupant, boolean explored) {
+		super(x, y, tubes, occupant,explored);
 	}
 
 	@Override

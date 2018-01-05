@@ -15,6 +15,14 @@ public class Room {
 			{
 				System.out.print("[B]");
 			}
+			else if(this.xLoc == 4 && this.yLoc == 3)
+			{
+				System.out.print("[I]");
+			}
+			else if(this.xLoc == 2 && this.yLoc == 4)
+			{
+				System.out.print("[K]");
+			}
 			else 
 			{
 				System.out.print("[ ]");

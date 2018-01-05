@@ -1,19 +1,13 @@
 
-<<<<<<< HEAD
-//Alyssa
-=======
 //Alyssa
 
-//returns letter R if correct
-
->>>>>>> branch 'master' of https://github.com/lzou9224/Rooms.git
 import java.util.Scanner;
 
 public class Kidneys extends Room
 
 {
-	public Kidneys(int x, int y, boolean[] tubes, Person occupant) {
-		super(x, y, tubes, occupant);
+	public Kidneys(int x, int y, boolean[] tubes, Person occupant, boolean explored) {
+		super(x, y, tubes, occupant,explored);
 	}
 	
 	@Override
@@ -54,6 +48,26 @@ public class Kidneys extends Room
 	
 	private String kGame()
 	{
+		System.out.print("Pop Quiz! How many kidneys do humans have?");
+		Scanner in = new Scanner(System.in);
+		String ans= "";
+		boolean res = true; 
+		
+		while(true)
+		{
+			ans = in.nextLine();
+
+			if(ans.equals("2"))
+			{
+				System.out.println("Correct. Your next letter is R.");
+				res= false;
+			}
+			else
+			{
+				System.out.println("Wrong. Increased risk of vomitting.");
+			}
+			return("Out.");
+		}
 		
 	}
 	
