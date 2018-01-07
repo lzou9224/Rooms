@@ -4,10 +4,14 @@ import java.util.Scanner;
 public class Esophagus extends Room
 {
 	private static final String x = null;
-	private boolean explored;
 	
-	public Esophagus(int x, int y, boolean[] tubes, Person occupant) {
-		super(x, y, tubes, occupant);
+	public Esophagus(int x, int y, Person occupant, boolean explored, int vomitPts) {
+		super(x, y,occupant,explored,vomitPts);
+		// TODO Auto-generated constructor stub
+	} 
+	
+	public int getVomitPts() {
+		return vomitPts;
 	}
 	
 	@Override
@@ -16,32 +20,7 @@ public class Esophagus extends Room
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("Welcome to the ESOPHAGUS!");
-	}
 	
-	public void leaveRoom(Person x)
-	{
-		occupant = null;
-	}
-	
-	public void print()
-	{
-		if (getOccupant().yLoc != 0)
-	    {
-	      System.out.print(getOccupant().print();
-	    }
-	    else if (this.explored)
-	    {
-	      System.out.print("[ H ]");
-	    }
-	    else
-	    {
-	      System.out.print("[   ]");
-	    }
-
-	}
-
-	public static void askQuestion()
-	{
 		//individualized trivia question for the esophagus
 		System.out.print("What does the esophagus say to the trachea when water comes?");
 		System.out.println("A) Run away! B) I will protect you C) DRINK DRINK DRINK! D) Loosen up man");
@@ -49,45 +28,22 @@ public class Esophagus extends Room
 		String response= "";
 		boolean question = true; 
 		
-		while(true)
+		while(question)
 		{
 			response = in.nextLine();
 
-			if(response.equals("C"))
+			if(response.toLowerCase().equals("c"))
 			{
 				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'A'");
 				question= false;
 			}
 			else
 			{
-				System.out.println(response + " is incorrect. Vomit point +10. Please try again!");
+				System.out.println(response + " is incorrect. Vomit Points: " + vomitPts + ". Please try again!");
 				//excess vomit points will cause the player to 'vomit' or 'game over!'
-				occupant.vomitPts;
+				vomitPts++;
 			}
 		}
+		Runner.leaveRoom();
 	}
-	
-	public String toString()
-	{
-	   boolean[] tubes = this.getTubes();
-	   String response = "This is the esophagus. It is connected to the ";
-	   if (tubes[0])
-	   {
-		   response += "N";
-	   }
-	   
-	   if(tubes[1]) {
-		   response += " and E";
-	   }
-	    	
-	   if (tubes[2]) {
-		   response += " and S";
-	   }
-	    	
-	   if (tubes[3]) {
-		   response += " and W";
-	   }
-	    	
-	    	return response;
-	   }
 }

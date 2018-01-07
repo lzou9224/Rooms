@@ -6,8 +6,13 @@ import java.util.Scanner;
 public class Kidneys extends Room
 
 {
-	public Kidneys(int x, int y, boolean[] tubes, Person occupant, boolean explored) {
-		super(x, y, tubes, occupant,explored);
+	public Kidneys(int x, int y, Person occupant, boolean explored, int vomitPts) {
+		super(x, y,occupant,explored,vomitPts);
+		// TODO Auto-generated constructor stub
+	} 
+	
+	public int getVomitPts() {
+		return vomitPts;
 	}
 	
 	@Override
@@ -16,6 +21,10 @@ public class Kidneys extends Room
 		x.setxLoc(this.xLoc); 
 		x.setyLoc(this.yLoc);
 		System.out.println("You have entered the Kidneys.");
+		
+		//lily: put game code here
+		
+		Runner.leaveRoom(); //returns to board
 	}
 	
 	//question game type?
@@ -39,7 +48,7 @@ public class Kidneys extends Room
 		{
 			System.out.println("Wrong. Increased risk of vomitting.");
 			
-			vomitpts++;
+			vomitPts++;
 		}
 		
 	}
@@ -74,37 +83,8 @@ public class Kidneys extends Room
 	
 	private static int findKeyword(String statement, String string) {
 		// TODO Auto-generated method stub
-		
-		
 		return -1;
 	}
 
-	public String toString()
-	{
-	   boolean[] tubes = this.getTubes();
-	   String response = "These are the kidneys. They are connected to the ";
-	   if (tubes[0])
-	   {
-		   response += "N";
-	   }
-	   
-	   if(tubes[1]) {
-		   response += " and E";
-	   }
-	    	
-	   if (tubes[2]) {
-		   response += " and S";
-	   }
-	    	
-	   if (tubes[3]) {
-		   response += " and W";
-	   }
-	    	
-	    	return response;
-	   }
-	public void leaveRoom(Person x)
-	{
-		occupant = null;
-	}
 	
 }

@@ -3,7 +3,6 @@ public class Room {
 	Person occupant;
 	int xLoc,yLoc;
 	private boolean explored = false;
-	private boolean[] tubes;
 	int vomitPts;
 
 	//print method, subject to change 
@@ -50,19 +49,13 @@ public class Room {
 		
 	}
 
-	public Room(int x, int y, boolean[] tubes, Person occupant, boolean explored, int vomitPts)
+	public Room(int x, int y, Person occupant, boolean explored, int vomitPts)
 	{
 		this.xLoc = x;
 		this.yLoc = y;
-        this.tubes = tubes;  //tubes = doors
         this.occupant = occupant;
         this.explored = false;
         this.vomitPts = vomitPts;
-	}
-
-	public int getTotalVomitPts() {
-		return this.vomitPts;
-		
 	}
 	public void enterRoom(Person x)
 	{
@@ -70,11 +63,6 @@ public class Room {
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 	}
-	
-    public boolean[] getTubes()
-    {
-    	return tubes;
-    }
 	
     public Person getOccupant() {
         return occupant;

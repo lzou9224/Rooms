@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Bladder extends Room 
 {
-	public Bladder(int x, int y, boolean[] tubes, Person occupant, boolean explored, int vomitPts) {
-		super(x, y, tubes, occupant,explored,vomitPts);
+	public Bladder(int x, int y, Person occupant, boolean explored, int vomitPts) {
+		super(x, y,occupant,explored,vomitPts);
 		// TODO Auto-generated constructor stub
 	} 
 	
@@ -28,7 +28,7 @@ public class Bladder extends Room
 		while(question)
 		{
 			String response = in.nextLine();
-			if(response.toLowerCase().equals("fluid")) {
+			if(response.toLowerCase().equals("hole")) {
 				System.out.println("\nCONGRATSS YOU WON!!! Now get out of here!!!\n\n*You are now out of the system*");
 				question = false;
 			}
@@ -39,8 +39,6 @@ public class Bladder extends Room
 		}
 		
 		//scanner to exit and go back to the runner
-
-
 		Runner.gameOff();
 	}
 	

@@ -8,20 +8,21 @@
 import java.util.Scanner;
 
 public class Runner {
-	
 
 	private static boolean gameOn = true;
-	
 	
 	public static void main(String[] args)
 	{
 		Room[][] building = new Room[5][5];
 		Board gb = new Board(building);
-		boolean[] tubes = {true, true, true, true};
 		boolean explored = false;
 		Person occupants = null;
 		int vomitPts = 0;
 		Bladder bladder;
+		Esophagus esophagus;
+		Intestines intestines;
+		Kidneys kidneys;
+		Liver liver;
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x < building.length; x++)
@@ -29,7 +30,7 @@ public class Runner {
 			Room[] row = building[x];
 			for (int y = 0; y < row.length; y++)
 			{	
-				row[y] = new Room(x,y, tubes, occupants,explored,vomitPts);
+				row[y] = new Room(x,y, occupants,explored,vomitPts);
 			}
 		}
 
@@ -54,26 +55,49 @@ public class Runner {
 		System.out.println("\nWhere would you like to move? Use the 'W','A','S','D' keys :D");
 
 		while(gameOn)  
-		{	
-			gb.printBoard();   
+		{	gb.printBoard(); 
 			String move = in.nextLine();
 
 			if(validMove(move, player1, building))
 			{
 				//if player inputs a valid move, then indicate whether the player entered a room
-				
-				// if the player's coordinate is at row = 1, col = 2, then the player will enter the bladder
-				if(player1.getxLoc() == 1 && player1.getyLoc()==2) {
-					gb.printBoard();  
-					bladder = new Bladder(player1.getxLoc(), player1.getyLoc(), null, player1, gameOn,vomitPts);
+			
+				//Esophagus
+			    if(player1.getxLoc() == 4 && player1.getyLoc() == 1) {
+					gb.printBoard(); 
+			    	esophagus = new Esophagus(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
+					esophagus.enterRoom(player1);
+					System.out.println("\n*You exit the room*");
+				}
+				//Intestines
+				else if(player1.getxLoc() == 4 && player1.getyLoc() == 0) {
+					gb.printBoard(); 
+					intestines = new Intestines(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
+					intestines.enterRoom(player1);
+				}
+				//Kidney
+				else if(player1.getxLoc() == 2 && player1.getyLoc() == 4) {
+					gb.printBoard(); 
+					kidneys = new Kidneys(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
+					kidneys.enterRoom(player1);
+				}
+				//Liver
+				else if(player1.getxLoc() == 1 && player1.getyLoc() == 2) {
+					gb.printBoard(); 
+					liver = new Liver(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
+					liver.enterRoom(player1);
+				}
+				//Bladder
+				else if(player1.getxLoc() == 4 && player1.getyLoc()==4) { 
+					gb.printBoard(); 
+					bladder = new Bladder(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
 					bladder.enterRoom(player1);
 					//vomit point in bladder is based on the total elsewhere
-					//vomitPts = bladder.getVomitPts();
-					//System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
+					//vomitPts = bladder.getVomitPts() + esophagus.getVomitpts...
+					//System.out.println("\n*You exit the room*);
 				}
-				else
-				{
-					System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
+				else {
+					System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);	
 				}
 			}
 			
@@ -147,7 +171,7 @@ public class Runner {
 			gameOn = false;	
 	}
 	
-	public static void gameCont()
+	public static void leaveRoom()
 	{
 			gameOn = true;	
 	}
