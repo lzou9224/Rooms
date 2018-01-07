@@ -53,7 +53,7 @@ public class Runner {
 				+ "Once you have reached 5 vomit points... GAME OVER, YOU GO BACK TO THE MOUTH AND VOMIT AHAHAHAH");
 		
 		System.out.println("\nWhere would you like to move? Use the 'W','A','S','D' keys :D");
-
+ 
 		while(gameOn)  
 		{	gb.printBoard(); 
 			String move = in.nextLine();
@@ -74,27 +74,27 @@ public class Runner {
 					gb.printBoard(); 
 					intestines = new Intestines(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
 					intestines.enterRoom(player1);
+					System.out.println("\n*You exit the room*");
 				}
 				//Kidney
 				else if(player1.getxLoc() == 2 && player1.getyLoc() == 4) {
 					gb.printBoard(); 
 					kidneys = new Kidneys(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
 					kidneys.enterRoom(player1);
+					System.out.println("\n*You exit the room*");
 				}
 				//Liver
 				else if(player1.getxLoc() == 1 && player1.getyLoc() == 2) {
 					gb.printBoard(); 
 					liver = new Liver(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
 					liver.enterRoom(player1);
+					System.out.println("\n*You exit the room*");
 				}
 				//Bladder
 				else if(player1.getxLoc() == 4 && player1.getyLoc()==4) { 
 					gb.printBoard(); 
 					bladder = new Bladder(player1.getxLoc(), player1.getyLoc(), player1, gameOn,vomitPts);
 					bladder.enterRoom(player1);
-					//vomit point in bladder is based on the total elsewhere
-					//vomitPts = bladder.getVomitPts() + esophagus.getVomitpts...
-					//System.out.println("\n*You exit the room*);
 				}
 				else {
 					System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);	

@@ -42,7 +42,8 @@ public class Room {
 			occupant.print();
 			System.out.print("]");
 		}
-		else if(explored)
+		
+		if(explored)
 		{
 			System.out.print("[-]");
 		}
@@ -76,7 +77,5 @@ public class Room {
 	{
 		occupant = null;
 		
-	}
-
-	
+	}	
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Esophagus extends Room
 {
 	private static final String x = null;
-	
+
 	public Esophagus(int x, int y, Person occupant, boolean explored, int vomitPts) {
 		super(x, y,occupant,explored,vomitPts);
 		// TODO Auto-generated constructor stub
@@ -34,7 +34,7 @@ public class Esophagus extends Room
 
 			if(response.toLowerCase().equals("c"))
 			{
-				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'A'");
+				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'L'");
 				question= false;
 			}
 			else
