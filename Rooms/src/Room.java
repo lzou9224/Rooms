@@ -4,6 +4,7 @@ public class Room {
 	int xLoc,yLoc;
 	private boolean explored = false;
 	private boolean[] tubes;
+	int vomitPts;
 
 	//print method, subject to change 
 	//fixed print by defining print in person 
@@ -11,17 +12,25 @@ public class Room {
 	{
 		if(!explored && occupant == null)
 		{
-			if(this.xLoc == 1 && this.yLoc == 2) 
+			if(this.xLoc == 4 && this.yLoc == 4) 
 			{
 				System.out.print("[B]");
 			}
-			else if(this.xLoc == 4 && this.yLoc == 3)
+			else if(this.xLoc == 4 && this.yLoc == 0)
 			{
 				System.out.print("[I]");
 			}
 			else if(this.xLoc == 2 && this.yLoc == 4)
 			{
 				System.out.print("[K]");
+			}
+			else if(this.xLoc == 4 && this.yLoc == 1)
+			{
+				System.out.print("[E]");
+			}
+			else if(this.xLoc == 1 && this.yLoc == 2)
+			{
+				System.out.print("[L]");
 			}
 			else 
 			{
@@ -41,15 +50,20 @@ public class Room {
 		
 	}
 
-	public Room(int x, int y, boolean[] tubes, Person occupant, boolean explored)
+	public Room(int x, int y, boolean[] tubes, Person occupant, boolean explored, int vomitPts)
 	{
 		this.xLoc = x;
 		this.yLoc = y;
         this.tubes = tubes;  //tubes = doors
         this.occupant = occupant;
         this.explored = false;
+        this.vomitPts = vomitPts;
 	}
 
+	public int getTotalVomitPts() {
+		return this.vomitPts;
+		
+	}
 	public void enterRoom(Person x)
 	{
 		occupant = x;

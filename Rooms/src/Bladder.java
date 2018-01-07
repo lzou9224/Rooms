@@ -1,50 +1,47 @@
 //Lily
-//1/2 put a value to vomitpts
 import java.util.Scanner;
 
 public class Bladder extends Room 
 {
-	public static int bladderVomitPts;
-	
-	public static int getBladderVomitPts() {
-		return bladderVomitPts;
-	}
-
-	public static int getBVomitPts(int vomitPts) {
-		vomitPts = getBladderVomitPts();
-		bladderVomitPts += vomitPts;
-		return bladderVomitPts;
-	}
-
-	public Bladder(int x, int y, boolean[] tubes, Person occupant, boolean explored) {
-		super(x, y, tubes, occupant,explored);
+	public Bladder(int x, int y, boolean[] tubes, Person occupant, boolean explored, int vomitPts) {
+		super(x, y, tubes, occupant,explored,vomitPts);
 		// TODO Auto-generated constructor stub
 	} 
+	
+	public int getVomitPts() {
+		return vomitPts;
+	}
 	  
 	@Override
 	public void enterRoom(Person x) {
 		// TODO Auto-generated method stub
-		int vomit = 0;
+		//Cannot Enter unless all other rooms are explored.
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("\nYou just eneterd the bladder!!!");
-		//if answer is wrong
-		vomit++;
+		System.out.println("\nThis is your final chance to get out of here! What is the word?\nAnswer: ");
 		
-		//at the end
-		getBVomitPts(vomit);
+		Scanner in = new Scanner(System.in);
+		boolean question = true; 
 		
-		//Input the correct keyword
+		while(question)
+		{
+			String response = in.nextLine();
+			if(response.toLowerCase().equals("fluid")) {
+				System.out.println("\nCONGRATSS YOU WON!!! Now get out of here!!!\n\n*You are now out of the system*");
+				question = false;
+			}
+			else {
+				vomitPts++;
+				System.out.println("\nSORRY, TRY AGAIN! Vomit Points: " + vomitPts +"\nAnswer: ");
+			}
+		}
 		
 		//scanner to exit and go back to the runner
-		System.out.println("LALALAL THIS WORKS.....Would you like to exit? Y or N");
+
+
 		Runner.gameOff();
 	}
 	
-	public void print()
-	{
-		System.out.print("b");
-	}
-
 }

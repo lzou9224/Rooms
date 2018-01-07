@@ -17,7 +17,10 @@ public class Runner {
 	{
 		Room[][] building = new Room[5][5];
 		Board gb = new Board(building);
-		int vomitPts = Bladder.getBladderVomitPts();
+		boolean[] tubes = {true, true, true, true};
+		boolean explored = false;
+		Person occupants = null;
+		int vomitPts = 0;
 		Bladder bladder;
 		
 		//Fill the building with normal rooms
@@ -25,11 +28,8 @@ public class Runner {
 		{
 			Room[] row = building[x];
 			for (int y = 0; y < row.length; y++)
-			{
-				boolean[] tubes = {true, true, true, true};
-				boolean explored = false;
-				Person occupants = null;
-				row[y] = new Room(x,y, tubes, occupants,explored);
+			{	
+				row[y] = new Room(x,y, tubes, occupants,explored,vomitPts);
 			}
 		}
 
@@ -39,7 +39,7 @@ public class Runner {
 		//obtain Username from the player
 		System.out.println("Welcome to 'DONDE ESTAS EL AGUA?'\nPlease enter your Username: ");
 		String userName = in.nextLine();
-		Person player1 = new Person(userName, 0, 0, vomitPts);
+		Person player1 = new Person(userName, 0, 0);
 		String p1Name = player1.getUserName();
 		
 		building[0][0].enterRoom(player1); //Player always starts at 0,0.
@@ -61,13 +61,19 @@ public class Runner {
 			if(validMove(move, player1, building))
 			{
 				//if player inputs a valid move, then indicate whether the player entered a room
-				System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
 				
 				// if the player's coordinate is at row = 1, col = 2, then the player will enter the bladder
 				if(player1.getxLoc() == 1 && player1.getyLoc()==2) {
 					gb.printBoard();  
-					bladder = new Bladder(player1.getxLoc(), player1.getyLoc(), null, player1, gameOn);
+					bladder = new Bladder(player1.getxLoc(), player1.getyLoc(), null, player1, gameOn,vomitPts);
 					bladder.enterRoom(player1);
+					//vomit point in bladder is based on the total elsewhere
+					//vomitPts = bladder.getVomitPts();
+					//System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
+				}
+				else
+				{
+					System.out.println("\nYour coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc() + "\nVomit Points = " + vomitPts);
 				}
 			}
 			
@@ -138,9 +144,14 @@ public class Runner {
 	}
 	public static void gameOff()
 	{
-		gameOn = false;
+			gameOn = false;	
 	}
 	
+	public static void gameCont()
+	{
+			gameOn = true;	
+	}
+		
 
 
 }

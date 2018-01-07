@@ -13,7 +13,7 @@ public class Kidneys extends Room
 	@Override
 	public void enterRoom(Person x) {
 		occupant = x;
-		x.setxLoc(this.xLoc);
+		x.setxLoc(this.xLoc); 
 		x.setyLoc(this.yLoc);
 		System.out.println("You have entered the Kidneys.");
 	}
