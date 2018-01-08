@@ -34,7 +34,9 @@ public class Liver extends Room
 
 			if(response.toLowerCase().equals("d"))
 			{
-				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'H'");
+				System.out.println("Congratulations! WOOOO! " + response + " is correct! You just obtained the letter 'H'");
+				System.out.println("\nPlease proceed on and continue your quest :)");
+
 				question= false;
 			}
 			else
