@@ -20,6 +20,7 @@ public class Esophagus extends Room
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("Welcome to the ESOPHAGUS!");
+		System.out.println("\nGet ready to begin your QUEST to escape!!/n");
 	
 		//individualized trivia question for the esophagus
 		System.out.print("What does the esophagus say to the trachea when water comes?");
