@@ -1,4 +1,4 @@
-//Lingli Zou
+//Lingli
 import java.util.Scanner;
 
 public class Liver extends Room
@@ -19,11 +19,11 @@ public class Liver extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("Welcome to TU LIVER >;)!");
+		System.out.println("Welcome to TU LIVER >:(!");
 
 		//individualized trivia question for the liver
 		System.out.print("As the largest organ in your body, what % of water is your liver consist of?");
-		System.out.println("A) 45% B) 68% C) 85% D) 96%");
+		System.out.println("\nA) 45% B) 68% C) 85% D) 96%\n");
 		Scanner in = new Scanner(System.in);
 		String response= "";
 		boolean question = true; 
@@ -34,14 +34,15 @@ public class Liver extends Room
 
 			if(response.toLowerCase().equals("d"))
 			{
-				System.out.println("Congratulations! WOOOO! " + response + " is correct! You just obtained the letter 'H'");
-				System.out.println("\nPlease proceed on and continue your quest :)");
+				System.out.println("\nHmmmm unfortunately " + response + " is correct! You just obtained the letter 'H'");
+				System.out.println("FINE...I'll let you go THIS time but THIS TIME ONLY");
 
 				question= false;
 			}
 			else
 			{
-				System.out.println(response + " is incorrect. Vomit point: " + vomitPts +". Please try again!");
+				System.out.println("\nHA AS EXPECTED... " + response + " is INCORRECT! Vomit point: " + vomitPts + ".");
+				System.out.println("Poor you. I mean, I am sure it was not your fault :'D");
 				//excess vomit points will cause the player to 'vomit' or 'game over!'
 				vomitPts++;
 			}

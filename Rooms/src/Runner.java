@@ -46,14 +46,15 @@ public class Runner {
 		building[0][0].enterRoom(player1); //Player always starts at 0,0.
 		
 		System.out.println("\nWelcome, " + p1Name + "!\n");
+		//game mission
 		System.out.println("You entered the mouth and is on the brink of being absorbed! YAY :)\n"
-				+ "Go through all of the ogans and gather letters to find the missing word.\n"
+				+ "Go through all of the organs and gather letters to find the missing word.\n"
 				+ "The missing word will allow you to escape through the Bladder at the last row and last column.\n"
 				+ "Correct answers to the trivia questions will gain you letters! Incorrect answers will surprise you with VOMIT POINTS\n"
 				+ "Once you have reached 5 vomit points... GAME OVER, YOU GO BACK TO THE MOUTH AND VOMIT AHAHAHAH");
 		
-		System.out.println("\nWhere would you like to move? Use the 'W','A','S','D' keys :D");
- 
+		System.out.println("\nWhere would you like to move? Use the 'W','A','S','D' keys to move");
+		System.out.println("\nYour location will be given by 'x' on the board\n");
 		while(gameOn)  
 		{	gb.printBoard(); 
 			String move = in.nextLine();
