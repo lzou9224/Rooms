@@ -41,10 +41,12 @@ public class Kidneys extends Room
 			{
 				System.out.println("Wrong. Increased risk of vomitting. Vomit Points: " + vomitPts);
 				vomitPts++;
+				
 			}
-			System.out.println("OUT YOU GO!!");
+			
 		}
-		
+		System.out.println("OUT YOU GO!!");
 		Runner.leaveRoom(); //returns to board
+		
 	}	
 }
