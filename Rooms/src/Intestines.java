@@ -41,6 +41,7 @@ public class Intestines extends Room
 			else 
 			{
 				System.out.println("Wrong. Increased risk of vomitting. Vomit Points: " + vomitPts);
+				vomitPts++;
 			}
 			//bug: does not take in consideration of strings
 			 

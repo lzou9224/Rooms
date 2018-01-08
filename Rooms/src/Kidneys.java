@@ -40,6 +40,7 @@ public class Kidneys extends Room
 			else
 			{
 				System.out.println("Wrong. Increased risk of vomitting. Vomit Points: " + vomitPts);
+				vomitPts++;
 			}
 			System.out.println("OUT YOU GO!!");
 		}
