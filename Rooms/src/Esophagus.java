@@ -21,9 +21,9 @@ public class Esophagus extends Room
 		x.setyLoc(this.yLoc);
 		System.out.println("Welcome to the ESOPHAGUS!");
 		System.out.println("\nGet ready to begin your QUEST to escape!!");
-	
+
 		//individualized trivia question for the esophagus
-		System.out.print("What does the esophagus say to the trachea when water comes?");
+		System.out.print("What does the esophagus say to the trachea when water comes? ");
 		System.out.println("A) Run away! B) I will protect you C) DRINK DRINK DRINK! D) Loosen up man");
 		Scanner in = new Scanner(System.in);
 		String response= "";
@@ -35,7 +35,9 @@ public class Esophagus extends Room
 
 			if(response.toLowerCase().equals("c"))
 			{
-				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'L'");
+				System.out.println("Congratulations! " + response + " is correct! You just obtained the letter 'L'"); 
+				System.out.println("\nProcess to the next room to continue your QUEST!");
+
 				question= false;
 			}
 			else
