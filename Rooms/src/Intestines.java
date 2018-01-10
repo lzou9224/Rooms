@@ -35,19 +35,23 @@ public class Intestines extends Room
 			
 			if(guess == result)
 			{
-				right = true;
 				System.out.println("Correct. Your next letter is O.");
+				System.out.println("Move along now.");
+				right = true;
+				Runner.leaveRoom();
 			}
 			else 
 			{
 				System.out.println("Wrong. Increased risk of vomitting. Vomit Points: " + vomitPts);
 				vomitPts++;
+				if(vomitPts >= 5) {
+					System.out.println("I'm sorry, but you just vomited yourself out of the system! Good Bye :(\n<<<GAME OVER! AHAAHA>>");
+					Runner.gameOff();
+					right = true;
+				}
 			}
 			//bug: does not take in consideration of strings
 			 
 		}
-		System.out.println("Move along now.");
-		
-		Runner.leaveRoom();
 	}
 }

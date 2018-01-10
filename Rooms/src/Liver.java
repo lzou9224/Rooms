@@ -36,15 +36,20 @@ public class Liver extends Room
 			{
 				System.out.println("\nHmmmm unfortunately " + response + " is correct! You just obtained the letter 'H'");
 				System.out.println("FINE...I'll let you go THIS time but THIS TIME ONLY");
-
 				question= false;
+				Runner.leaveRoom();
 			}
 			else
 			{
 				System.out.println("\nHA AS EXPECTED... " + response + " is INCORRECT! Vomit point: " + vomitPts + ".");
-				System.out.println("Poor you. I mean, I am sure it was not your fault :'D");
+				System.out.println("Poor you. I mean, I am sure it was not your fault :'D\nTry Again: ");
 				//excess vomit points will cause the player to 'vomit' or 'game over!'
 				vomitPts++;
+				if(vomitPts >= 5) {
+					System.out.println("I'm sorry, but you just vomited yourself out of the system! Good Bye :(\n<<<GAME OVER! AHAAHA>>");
+					Runner.gameOff();
+					question = false;
+				}	
 			}
 		}
 	}

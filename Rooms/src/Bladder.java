@@ -31,15 +31,18 @@ public class Bladder extends Room
 			if(response.toLowerCase().equals("hole")) {
 				System.out.println("\nCONGRATSS YOU WON!!! Now get out of here!!!\n\n*You are now out of the system*");
 				question = false;
+				Runner.gameOff();
 			}
 			else {
 				vomitPts++;
 				System.out.println("\nSORRY, TRY AGAIN! Vomit Points: " + vomitPts +"\nAnswer: ");
+				if(vomitPts >= 5) {
+					System.out.println("I'm sorry, but you just vomited yourself out of the system! Good Bye :(\n<<<GAME OVER! AHAAHA>>");
+					Runner.gameOff();
+					question = false;
+				}
 			}
 		}
-		
-		//scanner to exit and go back to the runner
-		Runner.gameOff();
 	}
 	
 }

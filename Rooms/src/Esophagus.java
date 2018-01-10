@@ -38,8 +38,8 @@ public class Esophagus extends Room
 				System.out.println("\nWOOO! " + response + " is correct! You just obtained the letter 'L'"); 
 				System.out.println("Don't get hyped up though. You only passed the easiest trivia question! ");
 				System.out.println("Process to the next room to continue");
-
 				question= false;
+				Runner.leaveRoom();
 			}
 			else
 			{
@@ -47,9 +47,12 @@ public class Esophagus extends Room
 				System.out.println("Don't get discouraged and try again!\n");
 				//excess vomit points will cause the player to 'vomit' or 'game over!'
 				vomitPts++;
+				if(vomitPts >= 5) {
+					System.out.println("I'm sorry, but you just vomited yourself out of the system! Good Bye :(\n<<<GAME OVER! AHAAHA>>");
+					Runner.gameOff();
+					question = false;
+				}
 			}
 		}
-		Runner.leaveRoom();
-
 	}
 }

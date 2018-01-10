@@ -13,23 +13,23 @@ public class Room {
 		{
 			if(this.xLoc == 4 && this.yLoc == 4) 
 			{
-				System.out.print("[B]");
+				System.out.print("[:]");
 			}
 			else if(this.xLoc == 4 && this.yLoc == 0)
 			{
-				System.out.print("[I]");
+				System.out.print("[2]");
 			}
 			else if(this.xLoc == 2 && this.yLoc == 4)
 			{
-				System.out.print("[K]");
+				System.out.print("[4]");
 			}
 			else if(this.xLoc == 4 && this.yLoc == 1)
 			{
-				System.out.print("[E]");
+				System.out.print("[3]");
 			}
 			else if(this.xLoc == 1 && this.yLoc == 2)
 			{
-				System.out.print("[L]");
+				System.out.print("[1]");
 			}
 			else 
 			{
@@ -41,11 +41,6 @@ public class Room {
 			System.out.print("[");
 			occupant.print();
 			System.out.print("]");
-		}
-		
-		if(explored)
-		{
-			System.out.print("[-]");
 		}
 		
 	}

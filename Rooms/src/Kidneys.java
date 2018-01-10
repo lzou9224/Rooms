@@ -36,17 +36,19 @@ public class Kidneys extends Room
 			{
 				System.out.println("Correct. Your next letter is E.");
 				res= false;
+				System.out.println("OUT YOU GO!!");
+				Runner.leaveRoom(); //returns to board
 			}
 			else
 			{
 				System.out.println("Wrong. Increased risk of vomitting. Vomit Points: " + vomitPts);
 				vomitPts++;
-				
-			}
-			
+				if(vomitPts >= 5) {
+					System.out.println("I'm sorry, but you just vomited yourself out of the system! Good Bye :(\n<<<GAME OVER! AHAAHA>>");
+					Runner.gameOff();
+					res = false;
+				}	
+			}	
 		}
-		System.out.println("OUT YOU GO!!");
-		Runner.leaveRoom(); //returns to board
-		
 	}	
 }

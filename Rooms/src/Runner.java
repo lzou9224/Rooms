@@ -17,7 +17,7 @@ public class Runner {
 		Board gb = new Board(building);
 		boolean explored = false;
 		Person occupants = null;
-		int vomitPts = 0;
+		int vomitPts = 1;
 		Bladder bladder;
 		Esophagus esophagus;
 		Intestines intestines;
